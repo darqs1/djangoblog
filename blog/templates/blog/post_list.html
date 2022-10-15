@@ -4,7 +4,17 @@
         <meta charset="UTF-8">
         <title>Blog</title>
     </head>
-    <body>
-<h1>Blog o programowaniu</h1>
-    </body>
+<body>
+    <div>
+        <h1>Blog o programowaniu</h1>
+    </div>
+    {% for post in posts %}
+    <div>
+        <p>opublikowany: {{ post.publish_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <em>{{ post.text|linebreaksbr }}</em>
+        
+    </div>
+    {% endfor %}
+</body>
 </html>
